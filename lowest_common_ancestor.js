@@ -19,7 +19,7 @@ class TreeNode {
   rootNode.right.right.parent = rootNode.right
   
   function lowestCommonAncestor (node, a, b) {
-    if (node === null) return node
+    if (node === null) return null
     
     if ([a.val, b.val].includes(node.val)) {
       return node
