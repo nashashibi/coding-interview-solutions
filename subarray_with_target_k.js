@@ -4,19 +4,19 @@ function subarray_with_target_k (nums, k) {
   sum = 0
   subArr = []
   i = 0
-  
+
   while (sum !== k) {
     n = nums[i]
     subArr.push(n)
     sum += n
-    
+
     while (sum > k) {
       sum -= subArr.shift()
     }
-    
+
     i++
   }
-  
+
   return subArr
 }
 

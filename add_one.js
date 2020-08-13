@@ -8,14 +8,15 @@ input = [2, 9, 9]
 function add_one (nums) {
   let i = nums.length - 1
   let done = false
-  
-  
+
+
   while (!done) {
     const n = nums[i]
-        
+
     if (n === 9) {
       nums[i] = 0
       // to add 1 at the beginnning if all nums are 9
+      // makes time complexity O(2n) instead of O(n)
       if (i === 0) {
         nums.unshift(1)
         done = true
@@ -24,10 +25,10 @@ function add_one (nums) {
       nums[i] += 1
       done = true
     }
-    
+
     i--
   }
-    
+
   return nums
 }
 
