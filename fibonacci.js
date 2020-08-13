@@ -4,12 +4,8 @@ function fibonacci (nth) {
     let prev2 = 0
     let tempPrev1
 
-    if (nth === 0) {
-        return 0
-    }
-
-    if (nth === 1) {
-        return 1
+    if (nth === 0 || nth === 1) {
+        return nth
     }
 
     for (i = 2; i < nth; i++) {
